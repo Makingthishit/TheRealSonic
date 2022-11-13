@@ -10,7 +10,7 @@ if not game:IsLoaded() then
 local plrtoinvite = "opaososa"
 print("Started")
 if game:GetService("Players"):FindFirstChild(plrtoinvite) then
-    
+    print("Executing")
     --gui
     
     spawn(function()
