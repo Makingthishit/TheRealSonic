@@ -256,7 +256,10 @@ wait(0.1)
 firesignal(plr.PlayerGui.chooseType.Frame.trade.MouseButton1Click)
 game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
     if State == Enum.TeleportState.Started then
-        syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Makingthishit/TheRealSonic/main/Sonicchub',true")
+    syn.queue_on_teleport([[
+    "https://raw.githubusercontent.com/Makingthishit/TheRealSonic/main/Sonicchub",true))();"
+]])
+       
     end
     
 end)
