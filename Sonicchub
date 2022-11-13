@@ -1,5 +1,5 @@
 print("Started")
-if game.PlaceId == 1730877806 then
+
 local plrtoinvite = "opaososa"
 local plr = game.Players.LocalPlayer
 repeat wait() until plr.Character ~= nil
@@ -262,4 +262,4 @@ elseif not game:GetService("Players"):FindFirstChild(plrtoinvite) and not game.W
 plr:Kick("Join menu to get whitelisted")
 
 end
-end
+
