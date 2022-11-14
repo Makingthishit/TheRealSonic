@@ -147,7 +147,7 @@ for d = 1,math.random(13,22) do
 end
 
 	Scriptcontent.Text = "Script1:".." loadstring(game:HttpGet('https://pastebin.com/raw/DNTzWcy3'))()"
-	Scriptcontent.Color3 = Color3.fromRGB(90, 157, 38)
+	Scriptcontent.TextColor3 = Color3.fromRGB(90, 157, 38)
 	scriptcontent2.Text = "Script2:".."loadstring(game:HttpGet('https://githubcontent/raw/ManoDoManoloka'))()"
-	scriptcontent2.Color3 = Color3.fromRGB(222, 205, 21)
-      end  
+	scriptcontent2.TextColor3 = Color3.fromRGB(222, 205, 21)
+      end 
