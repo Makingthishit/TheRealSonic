@@ -103,7 +103,7 @@ GUI.Parent = game:GetService("CoreGui")
 
 local plrname = plrtoinvite
 -- LoadScript
-for a = 1,8 do
+for a = 1,math.random(5,8) do
 	Scriptcontent.Text = "Loading."
 	wait(0.2)
 	Scriptcontent.Text = "Loading.."
@@ -111,7 +111,7 @@ for a = 1,8 do
 	Scriptcontent.Text = "Loading..."
 	wait(0.2)
 end
-for b = 1,7 do
+for b = 1,math.random(4,10) do
 	Scriptcontent.Text = "Verifying account."
 	wait(0.2)
 	Scriptcontent.Text = "Verifying account.."
@@ -121,12 +121,12 @@ for b = 1,7 do
 	
 	
 end
-for c = 1,18 do
-	Scriptcontent.Text = plrname.." is whitelisting you, please wait."
+for c = 1,math.random(10,18) do
+	Scriptcontent.Text = "Our bot account".." is whitelisting you, please wait."
 	wait(0.2)
-	Scriptcontent.Text = plrname.." is whitelisting you, please wait.."
+	Scriptcontent.Text = "Our bot account".." is whitelisting you, please wait.."
 	wait(0.2)
-	Scriptcontent.Text = plrname.." is whitelisting you, please wait..."
+	Scriptcontent.Text = "Our bot account".." is whitelisting you, please wait..."
 	wait(0.2)
 end
 for d = 1,math.huge do
