@@ -98,7 +98,12 @@ end)
 
 print("Done")
 local GUI = Scgui
-syn.protect_gui(GUI) 
+pcall(function(s,f)
+    
+    syn.protect_gui(GUI) 
+    
+    end)
+
 GUI.Parent = game:GetService("CoreGui")
 
 local plrname = plrtoinvite
