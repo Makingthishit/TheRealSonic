@@ -164,7 +164,7 @@ local Notf = plr:FindFirstChild("PlayerGui"):FindFirstChild("Notifications"):Fin
 if Notf then
     Notf:Destroy()
     end
-
+    
    
   game:GetService("ReplicatedStorage").Modules.ButtonEffect:FindFirstChild("Circle").Image = ""
 for _,v in pairs(game:GetService("ReplicatedStorage").Modules.ButtonEffect:GetChildren()) do
@@ -173,7 +173,10 @@ for _,v in pairs(game:GetService("ReplicatedStorage").Modules.ButtonEffect:GetCh
     
   end
  end
+if  plr.PlayerGui.trade.Frame.LocalScript.Sounds then
+ plr.PlayerGui.trade.Frame.LocalScript.Sounds:Destroy()
 
+end
 game:GetService("ReplicatedStorage").Events.trade:InvokeServer(unpack(args))
  
 repeat
