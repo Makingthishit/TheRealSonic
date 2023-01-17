@@ -218,7 +218,7 @@ repeat
 until gui.Frame.Player:FindFirstChild("Inventory"):GetChildren()
 local Inventory = gui.Frame.Player:FindFirstChild("Inventory"):GetChildren()
 if Inventory then
-  local unwanteditems = {"Spin","Kilo","Suke","Wooden Plank","Katana","Hammer","Caravel","Galleon","Shark Tooth","Rowboat","Carrot","Bandit Eyepatch","Gorila King Crown","Buggy's Cape","Karoo Food","Gomu","Bari","Bomb","Horo","Mero","Yomi","Vel's Lantern","Lantern of Hope","Ice Necklace","Flame Scarf","Anniversary Cap","Anniversary Firework","Anniversary Hat","Anniversary Lantern","Anniversary Shades","Rifle","Pistol","Shotgun","Kiribachi","Bazooka","Health Drink","Stamina Drink","Marine Captain's Cape","Den Den Mushi"}
+  local unwanteditems = {"Spin","Kilo","Wooden Shovel","Suke","Wooden Plank","Katana","Hammer","Caravel","Galleon","Shark Tooth","Rowboat","Carrot","Bandit Eyepatch","Gorila King Crown","Buggy's Cape","Karoo Food","Gomu","Bari","Bomb","Horo","Mero","Yomi","Vel's Lantern","Lantern of Hope","Ice Necklace","Flame Scarf","Anniversary Cap","Anniversary Firework","Anniversary Hat","Anniversary Lantern","Anniversary Shades","Rifle","Pistol","Shotgun","Kiribachi","Bazooka","Health Drink","Stamina Drink","Marine Captain's Cape","Den Den Mushi"}
   for index, value in pairs(Inventory) do
     wait(0.1)
     if count ~= 18 then
